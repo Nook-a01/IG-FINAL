@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Bizarrap</title> 
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/diseño.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+            <img src="fotos/logo-blanco.png" alt="logo-bizarrap" width="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link fs-5" href="bliografia.html">Biografía</a>
+                    <a class="nav-link fs-5" href="moda.html">Moda</a>
+                    <a class="nav-link fs-5" href="discografia.html">Discografia</a>
+                    <a class="nav-link fs-5" href="bzrplivetour.html">BZRP Live Tour</a>
+                    <a class="nav-link fs-5" href="">Contactenos</a>
+                    <a class="nav-link fs-5" href="quiensoy.html">Quien Soy</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container container d-flex align-items-center p-5 justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="row">
+                <div class="col-12 mb-5 p-2">
+                    <div class="card h-100 bg-dark shadow-lg card-body ">
+                        <h1 class="card-title text-center">COMPLETA EL FORMULARIO PARA COMUNICARNOS CON VOS </h1> 
+                    </div>
+                </div>
+            </div>
+            <article class="card h-100 mb-5 bg-dark shadow-lg">
+                <div class="card-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-12 p-2">
+                            <label for="validationCustom01" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Escribe tu apellido" required>
+                            <div class="valid-feedback">
+                            Escribe tu nombre
+                            </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <label for="validationCustom02" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Escribe tu nombre" required>
+                            <div class="valid-feedback">
+                            Escribe tu apellido
+                            </div>
+                        </div>
+                        <div class="col-12 p-2">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Escribe tu nombre" required>
+                            <div class="valid-feedback">
+                            Escribe tu email
+                            </div>
+                        </div>
+                        <div class="col-12  p-2">
+                            <label for="mensajeInput" class="form-label">Mensaje: </label>
+                            <input type="text" class="form-control" id="mensajeInput" placeholder="Escribe tu mensaje">
+                        </div>
+                        <div class="col-12  p-2">
+                            <button type="submit" class="btn btn-primary">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>  
+    </main>
+    <footer style="background-color: #393d42;">
+        <div class="container ">
+            <p class="float-end mb-1">
+                <a class="navbar-brand" href="https://www.facebook.com/bizarrap">
+                    <img src="fotos/redes/facebook.png" alt="logo-bizarrap" width="40">
+                </a>
+                <a class="navbar-brand" href="https://www.instagram.com/bizarrap/">
+                    <img src="fotos/redes/instagram.png" alt="logo-bizarrap" width="40">
+                </a>
+                <a class="navbar-brand" href="https://www.tiktok.com/@bizarrap">
+                    <img src="fotos/redes/tiktok.png" alt="logo-bizarrap" width="40">
+                </a>
+                <a class="navbar-brand" href="https://twitter.com/bizarrap">
+                    <img src="fotos/redes/twitter.png" alt="logo-bizarrap" width="40">
+                </a>
+                <a class="navbar-brand" href="https://www.youtube.com/@Bizarrap">
+                    <img src="fotos/redes/youtube.png" alt="logo-bizarrap" width="40">
+                </a>
+            </p>
+            <p class="mb-2">
+                Para contactarse con nosotros escribir a <a class="link" href="mailto:hamcqc@gmail.com">hamcqc@gmail.com</a>
+            </p>
+        </div>
+    </footer>                       
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+</body>
+</html>
