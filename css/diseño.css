@@ -7,6 +7,14 @@
   background-position: center center; /* Posición de la imagen en el centro */
 } 
 
+.fondo-homework {
+  background-color: #f0f0f0; /* Color de fondo sólido como respaldo */
+  background-image: url('../fotos/fondos/homework.jpeg'); /* Ruta de tu imagen de fondo */
+  background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+  background-position: center center; /* Posición de la imagen en el centro */
+}
+
 .timeline {
   position: relative;
   padding: 20px 0;
@@ -53,3 +61,27 @@
     height: 100%;
 }
  
+.album-header {
+  background: url('fotos/discografia/homework.jpeg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.album-header h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.album-header p {
+  font-size: 1.5rem;
+}
+.tracklist li {
+  margin-bottom: 10px;
+}
+.btn-back {
+  background-color: #c6212c;
+  color: white;
+}
