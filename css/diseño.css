@@ -1,18 +1,18 @@
 
 .fondo-index {
-  background-color: #f0f0f0; /* Color de fondo sólido como respaldo */
-  background-image: url('../fotos/fondos/index.jpg'); /* Ruta de tu imagen de fondo */
-  background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
-  background-repeat: no-repeat; /* Evitar la repetición de la imagen */
-  background-position: center center; /* Posición de la imagen en el centro */
+  background-color: #f0f0f0; 
+  background-image: url('../fotos/fondos/index.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
 } 
 
 .fondo-homework {
-  background-color: #f0f0f0; /* Color de fondo sólido como respaldo */
-  background-image: url('../fotos/fondos/homework.jpeg'); /* Ruta de tu imagen de fondo */
-  background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
-  background-repeat: no-repeat; /* Evitar la repetición de la imagen */
-  background-position: center center; /* Posición de la imagen en el centro */
+  background-color: #f0f0f0; 
+  background-image: url('../fotos/fondos/homework.jpeg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center; 
 }
 
 .timeline {
@@ -84,4 +84,34 @@
 .btn-back {
   background-color: #c6212c;
   color: white;
+}
+/* --------------------------------------------------- Fotos Galeria ---------------------------------------------------*/
+.gallery {
+  column-count: 3;
+  column-gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .gallery {
+      column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+      column-count: 1;
+  }
 }
