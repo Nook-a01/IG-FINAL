@@ -115,3 +115,137 @@
       column-count: 1;
   }
 }
+/* --------------------------------------------------- Fotos Galeria ---------------------------------------------------*/
+/* Estilos personalizados */
+
+#game-area {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #111;
+  border: 2px solid #ffcc00;
+  overflow: hidden;
+}
+
+#notes-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.note {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-color: #ffcc00;
+  border-radius: 5px;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(380px);
+  }
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.key {
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+#score, #combo {
+  color: #ffcc00;
+}
+/* --------------------------------------------------- Juego ---------------------------------------------------*/
+.dropzone {
+  min-height: 100px; /* Altura mínima */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Colores para los botones de samples */
+.btn-sample-1 {
+  background-color: #4a148c; /* Morado oscuro */
+  border-color: #4a148c;
+  color: white;
+}
+
+.btn-sample-2 {
+  background-color: #00695c; /* Verde oscuro */
+  border-color: #00695c;
+  color: white;
+}
+
+.btn-sample-3 {
+  background-color: #6a1b9a; /* Morado */
+  border-color: #6a1b9a;
+  color: white;
+}
+
+.btn-sample-4 {
+  background-color: #2e7d32; /* Verde */
+  border-color: #2e7d32;
+  color: white;
+}
+
+.btn-sample-5 {
+  background-color: #4527a0; /* Morado oscuro */
+  border-color: #4527a0;
+  color: white;
+}
+
+.btn-sample-6 {
+  background-color: #1b5e20; /* Verde oscuro */
+  border-color: #1b5e20;
+  color: white;
+}
+
+.btn-sample-7 {
+  background-color: #5e35b1; /* Morado */
+  border-color: #5e35b1;
+  color: white;
+}
+
+/* Botón de escuchar respuesta menos llamativo */
+.btn-info {
+  background-color: #1565c0; /* Azul oscuro */
+  border-color: #1565c0;
+  color: white;
+}
+
+/* Evitar que los botones se vuelvan transparentes al hacer hover */
+.btn-sample-1:hover,
+.btn-sample-2:hover,
+.btn-sample-3:hover,
+.btn-sample-4:hover,
+.btn-sample-5:hover,
+.btn-sample-6:hover,
+.btn-sample-7:hover,
+.btn-info:hover {
+  opacity: 1 !important; /* Mantener la opacidad al 100% */
+  background-color: inherit; /* Mantener el color de fondo */
+  border-color: inherit; /* Mantener el color del borde */
+  color: inherit; /* Mantener el color del texto */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 576px) {
+  .sample-buttons button {
+      width: 100%; /* Los botones ocupan todo el ancho en móviles */
+      margin: 5px 0; /* Espaciado vertical entre botones */
+      padding: 10px; /* Aumentar el área táctil */
+      font-size: 1rem; /* Tamaño de fuente más grande para móviles */
+  }
+
+  .dropzone {
+      min-height: 80px; /* Altura mínima reducida para móviles */
+      padding: 15px; /* Aumentar el área táctil */
+  }
+}
