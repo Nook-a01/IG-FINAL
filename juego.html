@@ -1,279 +1,220 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daft Punk</title> 
+    <title>Daft Punk</title>
     <link rel="icon" type="image/png" href="fotos/icono/icono.png">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/diseño.css" rel="stylesheet">
     <script src="js/bootstrap.js"></script>
 </head>
-<body class="bg-dark text-white"> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-white">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand ms-3">
-                <img src="fotos/nav/logo.png" alt="logo" width="100" class="p-2">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item fs-5"><a class="nav-link" href="biografia.html">Biografía</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="discografia.html">Discografía</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="el_casco.html">El Casco</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="galeria_multimedia.html">Galería</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="giras.html">Giras</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="juego.html">Juego</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="formulario.html">Contacto</a></li>
-                    <li class="nav-item fs-5"><a class="nav-link" href="quien_soy.html">Quién Soy</a></li>
-                </ul>
+
+<body style="background-color: #000000;">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-white">
+            <div class="container-fluid">
+                <a href="index.html" class="p-2 ms-3">
+                    <img src="fotos/nav/logo.png" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="fs-5"><a class="nav-link" href="biografia.html">Biografía</a></li>
+                        <li class="fs-5"><a class="nav-link" href="discografia.html">Discografía</a></li>
+                        <li class="fs-5"><a class="nav-link" href="el_casco.html">El Casco</a></li>
+                        <li class="fs-5"><a class="nav-link" href="galeria_multimedia.html">Galería</a></li>
+                        <li class="fs-5"><a class="nav-link" href="giras.html">Giras</a></li>
+                        <li class="fs-5"><a class="nav-link" href="juego.html">Juego</a></li>
+                        <li class="fs-5"><a class="nav-link" href="formulario.html">Contacto</a></li>
+                        <li class="fs-5"><a class="nav-link" href="quien_soy.html">Quién Soy</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>  
-    <!-- Pantalla de inicio -->
-    <div id="pantallaInicio" class="container text-center mt-5">
-        <h1 class="mb-4 display-4">Daft Punk Sample Mixer</h1>
-        <div class="card bg-dark text-white p-4 mx-auto" style="max-width: 600px;">
-            <h2 class="card-title">Reglas del Juego</h2>
-            <div class="card-body">
-                <p class="card-text">
-                    Bienvenido al Daft Punk Sample Mixer. El objetivo del juego es reconstruir la canción arrastrando y soltando los samples en el orden correcto. Sigue estos pasos:
-                </p>
-                <ol class="text-start card-text">
-                    <li class="p-3">Escucha la canción de referencia haciendo clic en el botón "Reproducir referencia".</li>
-                    <li class="p-3">Arrastra los samples desde la parte inferior y suéltalos en el área de drop en el orden que creas correcto.</li>
-                    <li class="p-3">Puedes escuchar cada sample haciendo clic en él.</li>
-                    <li class="p-3">Si te equivocas, puedes eliminar el último sample con el botón "Eliminar Sample".</li>
-                    <li class="p-3">Cuando creas que has terminado, haz clic en "Verificar" para comprobar si la secuencia es correcta.</li>
-                    <li class="p-3">Tienes 5 minutos para completar cada nivel.</li>
-                </ol>
-                <h4 class="card-text p-4">¡Buena suerte!</h4>
-                <button class="btn btn-primary btn-lg" onclick="comenzarJuego()">Jugar</button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Pantalla de inicio -->
+        <section id="pantallaInicio" class="container text-center mt-5">
+            <h1 class="mb-4 display-4">Daft Punk Sample Mixer</h1>
+            <article class="card bg-dark text-white p-4 mx-auto" style="max-width: 600px;">
+                <h2 class="card-title">Reglas del Juego</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Bienvenido al Daft Punk Sample Mixer. El objetivo del juego es reconstruir la canción arrastrando y soltando los samples en el orden correcto. Sigue estos pasos:
+                    </p>
+                    <ol class="text-start card-text">
+                        <li class="p-3">Escucha la canción de referencia haciendo clic en el botón "Reproducir referencia".</li>
+                        <li class="p-3">Arrastra los samples desde la parte inferior y suéltalos en el área de drop en el orden que creas correcto.</li>
+                        <li class="p-3">Puedes escuchar cada sample haciendo clic en él.</li>
+                        <li class="p-3">Si te equivocas, puedes eliminar el último sample con el botón "Eliminar Sample".</li>
+                        <li class="p-3">Cuando creas que has terminado, haz clic en "Verificar" para comprobar si la secuencia es correcta.</li>
+                        <li class="p-3">Tienes 5 minutos para completar cada nivel.</li>
+                    </ol>
+                    <h4 class="card-text p-4">¡Buena suerte!</h4>
+                    <button class="btn btn-primary btn-lg" onclick="comenzarJuego()">Jugar</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Nivel 1 (oculto inicialmente) -->
+        <section id="nivel1" class="container text-center mt-5" style="display: none;">
+            <header>
+                <img src="sounds/nivel_1/discovery_nivel_1.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
+                <h2 id="timer" class="mb-4 display-2">05:00</h2>
+                <button class="btn btn-secondary mb-3" onclick="playSong()">Reproducir referencia</button>
+                <audio id="song" src="sounds/nivel_1/referencia_1.wav"></audio>
+            </header>
+            <div class="sample-buttons mb-4">
+                <button id="track_16" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
+                <button id="track_17" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
             </div>
-        </div>
-    </div>
-
-    <!-- Nivel 1 (oculto inicialmente) -->
-    <div id="nivel1" class="container text-center mt-5" style="display: none;">
-        <!-- Imagen del álbum -->
-        <img src="sounds/nivel_1/discovery_nivel_1.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
-
-        <!-- Temporizador -->
-        <h2 id="timer" class="mb-4 display-2">05:00</h2>
-
-        <!-- Botón para reproducir el audio de referencia -->
-        <button class="btn btn-secondary mb-3" onclick="playSong()">Reproducir referencia</button>
-        
-        <!-- Elemento de audio para la referencia -->
-        <audio id="song" src="sounds/nivel_1/referencia_1.wav"></audio>
-
-        <!-- Botones para reproducir y arrastrar los samples -->
-        <div class="sample-buttons mb-4">
-            <button id="track_16" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
-            <button id="track_17" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
-        </div>
-
-        <!-- Área para arrastrar y soltar los samples -->
-        <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
-        <p id="cantidadSamplesNivel1" class="mb-3">La respuesta correcta tiene 2 samples.</p>
-        <div id="dropzone" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
-            <!-- Aquí se colocarán los samples -->
-        </div>
-
-        <!-- Botones de control -->
-        <div class="mt-4">
-            <button class="btn btn-info me-2 mb-2" onclick="playAnswer()">Escuchar Respuesta</button>
-            <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample()">Eliminar Sample</button>
-            <button class="btn btn-success mb-2" onclick="checkOrder()">Verificar</button>
-        </div>
-
-        <!-- Mensaje de resultado -->
-        <p id="message" class="mt-3"></p>
-    </div>
-
-    <!-- Nivel 2 (oculto inicialmente) -->
-    <div id="nivel2" class="container text-center mt-5" style="display: none;">
-        <!-- Imagen del álbum -->
-        <img src="sounds/nivel_2/one_more_time_nivel_2.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
-
-        <!-- Temporizador -->
-        <h2 id="timer2" class="mb-4 display-2">05:00</h2>
-
-        <!-- Botón para reproducir el audio de referencia -->
-        <button class="btn btn-secondary mb-3" onclick="playSong2()">Reproducir referencia</button>
-        
-        <!-- Elemento de audio para la referencia -->
-        <audio id="song2" src="sounds/nivel_2/referencia_2.wav"></audio>
-
-        <!-- Botones para reproducir y arrastrar los samples -->
-        <div class="sample-buttons mb-4">
-            <button id="track_1" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
-            <button id="track_2" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
-            <button id="track_3" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
-        </div>
-
-        <!-- Área para arrastrar y soltar los samples -->
-        <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
-        <p id="cantidadSamplesNivel2" class="mb-3">La respuesta correcta tiene 13 samples.</p>
-        <div id="dropzone2" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
-            <!-- Aquí se colocarán los samples -->
-        </div>
-
-        <!-- Botones de control -->
-        <div class="mt-4">
-            <button class="btn btn-info me-2 mb-2" onclick="playAnswer2()">Escuchar Respuesta</button>
-            <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample2()">Eliminar Sample</button>
-            <button class="btn btn-success mb-2" onclick="checkOrder2()">Verificar</button>
-        </div>
-
-        <!-- Mensaje de resultado -->
-        <p id="message2" class="mt-3"></p>
-    </div>
-
-    <!-- Nivel 3 (oculto inicialmente) -->
-    <div id="nivel3" class="container text-center mt-5" style="display: none;">
-        <!-- Imagen del álbum -->
-        <img src="sounds/nivel_3/discovery_nivel_3.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
-
-        <!-- Temporizador -->
-        <h2 id="timer3" class="mb-4 display-2">05:00</h2>
-
-        <!-- Botón para reproducir el audio de referencia -->
-        <button class="btn btn-secondary mb-3" onclick="playSong3()">Reproducir referencia</button>
-        
-        <!-- Elemento de audio para la referencia -->
-        <audio id="song3" src="sounds/nivel_3/referencia_3.wav"></audio>
-
-        <!-- Botones para reproducir y arrastrar los samples -->
-        <div class="sample-buttons mb-4">
-            <button id="track_18" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
-            <button id="track_19" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
-            <button id="track_20" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
-            <button id="track_21" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
-        </div>
-
-        <!-- Área para arrastrar y soltar los samples -->
-        <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
-        <p id="cantidadSamplesNivel3" class="mb-3">La respuesta correcta tiene 4 samples.</p>
-        <div id="dropzone3" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
-            <!-- Aquí se colocarán los samples -->
-        </div>
-
-        <!-- Botones de control -->
-        <div class="mt-4">
-            <button class="btn btn-info me-2 mb-2" onclick="playAnswer3()">Escuchar Respuesta</button>
-            <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample3()">Eliminar Sample</button>
-            <button class="btn btn-success mb-2" onclick="checkOrder3()">Verificar</button>
-        </div>
-
-        <!-- Mensaje de resultado -->
-        <p id="message3" class="mt-3"></p>
-    </div>
-
-    <!-- Nivel 4 (oculto inicialmente) -->
-    <div id="nivel4" class="container text-center mt-5" style="display: none;">
-        <!-- Imagen del álbum -->
-        <img src="sounds/nivel_4/harder_better_nivel_4.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
-
-        <!-- Temporizador -->
-        <h2 id="timer4" class="mb-4 display-2">05:00</h2>
-
-        <!-- Botón para reproducir el audio de referencia -->
-        <button class="btn btn-secondary mb-3" onclick="playSong4()">Reproducir referencia</button>
-        
-        <!-- Elemento de audio para la referencia -->
-        <audio id="song4" src="sounds/nivel_4/referencia_4.wav"></audio>
-
-        <!-- Botones para reproducir y arrastrar los samples -->
-        <div class="sample-buttons mb-4">
-            <button id="track_11" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
-            <button id="track_12" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
-            <button id="track_13" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
-            <button id="track_14" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
-            <button id="track_15" class="btn btn-sample-5 m-2" draggable="true" ondragstart="drag(event)">Sample 5</button>
-        </div>
-
-        <!-- Área para arrastrar y soltar los samples -->
-        <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
-        <p id="cantidadSamplesNivel4" class="mb-3">La respuesta correcta tiene 5 samples.</p>
-        <div id="dropzone4" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
-            <!-- Aquí se colocarán los samples -->
-        </div>
-
-        <!-- Botones de control -->
-        <div class="mt-4">
-            <button class="btn btn-info me-2 mb-2" onclick="playAnswer4()">Escuchar Respuesta</button>
-            <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample4()">Eliminar Sample</button>
-            <button class="btn btn-success mb-2" onclick="checkOrder4()">Verificar</button>
-        </div>
-
-        <!-- Mensaje de resultado -->
-        <p id="message4" class="mt-3"></p>
-    </div>
-
-    <!-- Nivel 5 (oculto inicialmente) -->
-    <div id="nivel5" class="container text-center mt-5" style="display: none;">
-        <!-- Imagen del álbum -->
-        <img src="sounds/nivel_5/aerodynamic_nivel_5.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
-
-        <!-- Temporizador -->
-        <h2 id="timer5" class="mb-4 display-2">05:00</h2>
-
-        <!-- Botón para reproducir el audio de referencia -->
-        <button class="btn btn-secondary mb-3" onclick="playSong5()">Reproducir referencia</button>
-        
-        <!-- Elemento de audio para la referencia -->
-        <audio id="song5" src="sounds/nivel_5/referencia_5.wav"></audio>
-
-        <!-- Botones para reproducir y arrastrar los samples -->
-        <div class="sample-buttons mb-4">
-            <button id="track_4" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
-            <button id="track_5" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
-            <button id="track_6" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
-            <button id="track_7" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
-            <button id="track_8" class="btn btn-sample-5 m-2" draggable="true" ondragstart="drag(event)">Sample 5</button>
-            <button id="track_9" class="btn btn-sample-6 m-2" draggable="true" ondragstart="drag(event)">Sample 6</button>
-            <button id="track_10" class="btn btn-sample-7 m-2" draggable="true" ondragstart="drag(event)">Sample 7</button>
-        </div>
-
-        <!-- Área para arrastrar y soltar los samples -->
-        <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
-        <p id="cantidadSamplesNivel5" class="mb-3">La respuesta correcta tiene 7 samples.</p>
-        <div id="dropzone5" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
-            <!-- Aquí se colocarán los samples -->
-        </div>
-
-        <!-- Botones de control -->
-        <div class="mt-4">
-            <button class="btn btn-info me-2 mb-2" onclick="playAnswer5()">Escuchar Respuesta</button>
-            <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample5()">Eliminar Sample</button>
-            <button class="btn btn-success mb-2" onclick="checkOrder5()">Verificar</button>
-        </div>
-
-        <!-- Mensaje de resultado -->
-        <p id="message5" class="mt-3"></p>
-    </div>
-
-    <!-- Pantalla final de felicitaciones (oculta inicialmente) -->
-    <div id="pantallaFinal" class="container text-center mt-5" style="display: none;">
-        <h1 class="mb-4 display-4">¡Felicidades!</h1>
-        <div class="card bg-dark text-white p-4 mx-auto" style="max-width: 600px;">
-            <h2 class="card-title">Has completado todos los niveles</h2>
-            <div class="card-body">
-                <p class="card-text">
-                    ¡Felicidades! Has completado todos los niveles del Daft Punk Sample Mixer.
-                    ¡Eres un verdadero maestro de la música!
-                </p>
-                <button class="btn btn-primary btn-lg" onclick="reiniciarJuego()">Reiniciar Juego</button>
+            <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
+            <p id="cantidadSamplesNivel1" class="mb-3">La respuesta correcta tiene 2 samples.</p>
+            <div id="dropzone" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
+                <!-- Aquí se colocarán los samples -->
             </div>
-        </div>
-    </div>
+            <div class="mt-4">
+                <button class="btn btn-info me-2 mb-2" onclick="playAnswer()">Escuchar Respuesta</button>
+                <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample()">Eliminar Sample</button>
+                <button class="btn btn-success mb-2" onclick="checkOrder()">Verificar</button>
+            </div>
+            <p id="message" class="mt-3"></p>
+        </section>
 
-    <!-- Modal de Felicitaciones para el Nivel 1 -->
+        <!-- Nivel 2 (oculto inicialmente) -->
+        <section id="nivel2" class="container text-center mt-5" style="display: none;">
+            <header>
+                <img src="sounds/nivel_2/one_more_time_nivel_2.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
+                <h2 id="timer2" class="mb-4 display-2">05:00</h2>
+                <button class="btn btn-secondary mb-3" onclick="playSong2()">Reproducir referencia</button>
+                <audio id="song2" src="sounds/nivel_2/referencia_2.wav"></audio>
+            </header>
+            <div class="sample-buttons mb-4">
+                <button id="track_1" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
+                <button id="track_2" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
+                <button id="track_3" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
+            </div>
+            <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
+            <p id="cantidadSamplesNivel2" class="mb-3">La respuesta correcta tiene 13 samples.</p>
+            <div id="dropzone2" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
+                <!-- Aquí se colocarán los samples -->
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-info me-2 mb-2" onclick="playAnswer2()">Escuchar Respuesta</button>
+                <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample2()">Eliminar Sample</button>
+                <button class="btn btn-success mb-2" onclick="checkOrder2()">Verificar</button>
+            </div>
+            <p id="message2" class="mt-3"></p>
+        </section>
+
+        <!-- Nivel 3 (oculto inicialmente) -->
+        <section id="nivel3" class="container text-center mt-5" style="display: none;">
+            <header>
+                <img src="sounds/nivel_3/discovery_nivel_3.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
+                <h2 id="timer3" class="mb-4 display-2">05:00</h2>
+                <button class="btn btn-secondary mb-3" onclick="playSong3()">Reproducir referencia</button>
+                <audio id="song3" src="sounds/nivel_3/referencia_3.wav"></audio>
+            </header>
+            <div class="sample-buttons mb-4">
+                <button id="track_18" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
+                <button id="track_19" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
+                <button id="track_20" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
+                <button id="track_21" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
+            </div>
+            <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
+            <p id="cantidadSamplesNivel3" class="mb-3">La respuesta correcta tiene 4 samples.</p>
+            <div id="dropzone3" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
+                <!-- Aquí se colocarán los samples -->
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-info me-2 mb-2" onclick="playAnswer3()">Escuchar Respuesta</button>
+                <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample3()">Eliminar Sample</button>
+                <button class="btn btn-success mb-2" onclick="checkOrder3()">Verificar</button>
+            </div>
+            <p id="message3" class="mt-3"></p>
+        </section>
+
+        <!-- Nivel 4 (oculto inicialmente) -->
+        <section id="nivel4" class="container text-center mt-5" style="display: none;">
+            <header>
+                <img src="sounds/nivel_4/harder_better_nivel_4.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
+                <h2 id="timer4" class="mb-4 display-2">05:00</h2>
+                <button class="btn btn-secondary mb-3" onclick="playSong4()">Reproducir referencia</button>
+                <audio id="song4" src="sounds/nivel_4/referencia_4.wav"></audio>
+            </header>
+            <div class="sample-buttons mb-4">
+                <button id="track_11" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
+                <button id="track_12" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
+                <button id="track_13" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
+                <button id="track_14" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
+                <button id="track_15" class="btn btn-sample-5 m-2" draggable="true" ondragstart="drag(event)">Sample 5</button>
+            </div>
+            <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
+            <p id="cantidadSamplesNivel4" class="mb-3">La respuesta correcta tiene 5 samples.</p>
+            <div id="dropzone4" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
+                <!-- Aquí se colocarán los samples -->
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-info me-2 mb-2" onclick="playAnswer4()">Escuchar Respuesta</button>
+                <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample4()">Eliminar Sample</button>
+                <button class="btn btn-success mb-2" onclick="checkOrder4()">Verificar</button>
+            </div>
+            <p id="message4" class="mt-3"></p>
+        </section>
+
+        <!-- Nivel 5 (oculto inicialmente) -->
+        <section id="nivel5" class="container text-center mt-5" style="display: none;">
+            <header>
+                <img src="sounds/nivel_5/aerodynamic_nivel_5.png" alt="Album Cover" class="img-fluid mb-4" style="border-radius: 15px; height: auto; box-shadow: 0px 0px 20px 5px #ffffff;" width="300">
+                <h2 id="timer5" class="mb-4 display-2">05:00</h2>
+                <button class="btn btn-secondary mb-3" onclick="playSong5()">Reproducir referencia</button>
+                <audio id="song5" src="sounds/nivel_5/referencia_5.wav"></audio>
+            </header>
+            <div class="sample-buttons mb-4">
+                <button id="track_4" class="btn btn-sample-1 m-2" draggable="true" ondragstart="drag(event)">Sample 1</button>
+                <button id="track_5" class="btn btn-sample-2 m-2" draggable="true" ondragstart="drag(event)">Sample 2</button>
+                <button id="track_6" class="btn btn-sample-3 m-2" draggable="true" ondragstart="drag(event)">Sample 3</button>
+                <button id="track_7" class="btn btn-sample-4 m-2" draggable="true" ondragstart="drag(event)">Sample 4</button>
+                <button id="track_8" class="btn btn-sample-5 m-2" draggable="true" ondragstart="drag(event)">Sample 5</button>
+                <button id="track_9" class="btn btn-sample-6 m-2" draggable="true" ondragstart="drag(event)">Sample 6</button>
+                <button id="track_10" class="btn btn-sample-7 m-2" draggable="true" ondragstart="drag(event)">Sample 7</button>
+            </div>
+            <h3 class="mb-3">Arrastra y suelta los samples para construir la canción:</h3>
+            <p id="cantidadSamplesNivel5" class="mb-3">La respuesta correcta tiene 7 samples.</p>
+            <div id="dropzone5" class="dropzone mx-auto p-3 bg-dark border border-white rounded" style="max-width: 600px;">
+                <!-- Aquí se colocarán los samples -->
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-info me-2 mb-2" onclick="playAnswer5()">Escuchar Respuesta</button>
+                <button class="btn btn-danger me-2 mb-2" onclick="removeLastSample5()">Eliminar Sample</button>
+                <button class="btn btn-success mb-2" onclick="checkOrder5()">Verificar</button>
+            </div>
+            <p id="message5" class="mt-3"></p>
+        </section>
+
+        <!-- Pantalla final de felicitaciones (oculta inicialmente) -->
+        <section id="pantallaFinal" class="container text-center mt-5" style="display: none;">
+            <h1 class="mb-4 display-4">¡Felicidades!</h1>
+            <article class="card bg-dark text-white p-4 mx-auto" style="max-width: 600px;">
+                <h2 class="card-title">Has completado todos los niveles</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        ¡Felicidades! Has completado todos los niveles del Daft Punk Sample Mixer.
+                        ¡Eres un verdadero maestro de la música!
+                    </p>
+                    <button class="btn btn-primary btn-lg" onclick="reiniciarJuego()">Reiniciar Juego</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modales -->
     <div class="modal fade" id="modalFelicitaciones" tabindex="-1" aria-labelledby="modalFelicitacionesLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -290,7 +231,6 @@
         </div>
     </div>
 
-    <!-- Modal de Felicitaciones para el Nivel 2 -->
     <div class="modal fade" id="modalFelicitaciones2" tabindex="-1" aria-labelledby="modalFelicitaciones2Label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -307,7 +247,6 @@
         </div>
     </div>
 
-    <!-- Modal de Felicitaciones para el Nivel 3 -->
     <div class="modal fade" id="modalFelicitaciones3" tabindex="-1" aria-labelledby="modalFelicitaciones3Label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -324,7 +263,6 @@
         </div>
     </div>
 
-    <!-- Modal de Felicitaciones para el Nivel 4 -->
     <div class="modal fade" id="modalFelicitaciones4" tabindex="-1" aria-labelledby="modalFelicitaciones4Label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -341,7 +279,6 @@
         </div>
     </div>
 
-    <!-- Modal de "Se te acabó el tiempo" -->
     <div class="modal fade" id="modalPerdiste" tabindex="-1" aria-labelledby="modalPerdisteLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
@@ -358,32 +295,31 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer style="background-color: #000000;" class="border-top border-white">
+        <div class="d-flex justify-content-center ">
+            <a class="navbar-brand" target="_blank" href="https://www.facebook.com/daftpunk/?locale=es_LA">
+                <img src="fotos/footer/facebook.png" alt="logo-facebook" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.tiktok.com/@daftpunk?lang=es">
+                <img src="fotos/footer/tiktok.png" alt="logo-tiktok" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://x.com/daftpunk">
+                <img src="fotos/footer/x.png" alt="logo-x" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.youtube.com/channel/UC_kRDKYrUlrbtrSiyu5Tflg">
+                <img src="fotos/footer/youtube.png" alt="logo-youtube" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.instagram.com/daftpunk/?hl=es">
+                <img src="fotos/footer/instagram.png" alt="logo-instagram" width="40">
+            </a>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS y dependencias -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <!-- Script externo -->
     <script src="js/juego.js"></script>
-    
-    <footer style="background-color: #000000;" class="border-top border-white py-3">
-        <div class="container text-center">
-            <div class="d-flex flex-wrap justify-content-center mb-3">
-                <a class="navbar-brand mx-2" target="_blank" href="https://www.facebook.com/daftpunk/?locale=es_LA">
-                    <img src="fotos/footer/facebook.png" alt="logo-facebook" width="40">
-                </a>
-                <a class="navbar-brand mx-2" target="_blank" href="https://www.tiktok.com/@daftpunk?lang=es">
-                    <img src="fotos/footer/tiktok.png" alt="logo-tiktok" width="40">
-                </a>
-                <a class="navbar-brand mx-2" target="_blank" href="https://x.com/daftpunk">
-                    <img src="fotos/footer/x.png" alt="logo-x" width="40">
-                </a>
-                <a class="navbar-brand mx-2" target="_blank" href="https://www.youtube.com/channel/UC_kRDKYrUlrbtrSiyu5Tflg">
-                    <img src="fotos/footer/youtube.png" alt="logo-youtube" width="40">
-                </a>
-                <a class="navbar-brand mx-2" target="_blank" href="https://www.instagram.com/daftpunk/?hl=es">
-                    <img src="fotos/footer/instagram.png" alt="logo-instagram" width="40">
-                </a>
-            </div>
-        </div>
-    </footer> 
 </body>
 </html>
