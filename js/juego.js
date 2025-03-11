@@ -1085,3 +1085,56 @@ document.getElementById("dropzone4").ondrop = drop4;
 // Configurar el área de drop (Nivel 5)
 document.getElementById("dropzone5").ondragover = allowDrop;
 document.getElementById("dropzone5").ondrop = drop5;
+
+// Función para manejar el arrastre en dispositivos móviles
+function touchStart(event) {
+    let touch = event.touches[0];
+    let sample = event.target;
+    sample.classList.add("dragging");
+    
+    sample.dataset.touchX = touch.clientX;
+    sample.dataset.touchY = touch.clientY;
+}
+
+// Función para manejar el movimiento táctil
+function touchMove(event) {
+    event.preventDefault(); // Evita el desplazamiento de la página
+    let touch = event.touches[0];
+    let sample = document.querySelector(".dragging");
+    
+    if (!sample) return;
+    
+    let deltaX = touch.clientX - sample.dataset.touchX;
+    let deltaY = touch.clientY - sample.dataset.touchY;
+    
+    sample.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+}
+
+// Función para manejar el soltar en dispositivos móviles
+function touchEnd(event) {
+    let sample = document.querySelector(".dragging");
+    if (!sample) return;
+    
+    sample.style.transform = "";
+    sample.classList.remove("dragging");
+
+    let dropzone = document.elementFromPoint(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
+    
+    if (dropzone && dropzone.classList.contains("dropzone")) {
+        let clonedSample = sample.cloneNode(true);
+        clonedSample.draggable = true;
+        clonedSample.ondragstart = drag;
+        clonedSample.ontouchstart = touchStart;
+        clonedSample.ontouchmove = touchMove;
+        clonedSample.ontouchend = touchEnd;
+        
+        dropzone.appendChild(clonedSample);
+    }
+}
+
+// Asignar eventos táctiles a los botones de samples
+document.querySelectorAll(".sample-buttons button").forEach(button => {
+    button.ontouchstart = touchStart;
+    button.ontouchmove = touchMove;
+    button.ontouchend = touchEnd;
+});
