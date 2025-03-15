@@ -1,3 +1,4 @@
+/* --------------------------------------------------- Index ---------------------------------------------------*/
 
 .fondo-index {
   background-color: #f0f0f0; 
@@ -7,77 +8,8 @@
   background-position: center center; 
 } 
 
-.fondo-homework {
-  background-color: #f0f0f0; 
-  background-image: url('../fotos/fondos/homework.jpeg');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center center; 
-}
+/* --------------------------------------------------- Discografia ---------------------------------------------------*/
 
-.timeline {
-  position: relative;
-  padding: 20px 0;
-  margin: 40px 0;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: #ffffff;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-}
-
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 10%;
-  box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
-
-.timeline-content {
-    background: rgba(0, 0, 0, 0.8);
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.timeline-content img {
-    width: 100%;
-    height: 100%;
-}
- 
-.album-header {
-  background: url('fotos/discografia/homework.jpeg') no-repeat center center/cover;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-.album-header h1 {
-  font-size: 4rem;
-  margin-bottom: 0;
-}
-.album-header p {
-  font-size: 1.5rem;
-}
 .tracklist li {
   margin-bottom: 10px;
 }
@@ -85,7 +17,9 @@
   background-color: #c6212c;
   color: white;
 }
+
 /* --------------------------------------------------- Fotos Galeria ---------------------------------------------------*/
+
 .gallery {
   column-count: 3;
   column-gap: 15px;
@@ -115,55 +49,9 @@
       column-count: 1;
   }
 }
-/* --------------------------------------------------- Fotos Galeria ---------------------------------------------------*/
-/* Estilos personalizados */
 
-#game-area {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  margin: 0 auto;
-  background-color: #111;
-  border: 2px solid #ffcc00;
-  overflow: hidden;
-}
-
-#notes-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.note {
-  position: absolute;
-  width: 50px;
-  height: 20px;
-  background-color: #ffcc00;
-  border-radius: 5px;
-  animation: fall linear;
-}
-
-@keyframes fall {
-  to {
-      transform: translateY(380px);
-  }
-}
-
-#controls {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.key {
-  font-size: 24px;
-  padding: 10px 20px;
-}
-
-#score, #combo {
-  color: #ffcc00;
-}
 /* --------------------------------------------------- Juego ---------------------------------------------------*/
+
 .dropzone {
   min-height: 100px; /* Altura mínima */
   padding: 10px;

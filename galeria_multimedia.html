@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daft Punk</title>
+    <title>Galeria - Daft Punk</title>
     <link rel="icon" type="image/png" href="fotos/icono/icono.png">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/diseño.css" rel="stylesheet">
@@ -205,12 +205,11 @@
             </section>
         </div>
 
-        <!-- Modal para imágenes ampliadas -->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg"> 
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-body text-center p-0"> 
-                        <img id="modalImage" src="" class="img-fluid" alt="Imagen Ampliada">
+                    <div class="modal-body text-center p-0">
+                        <img id="modalImage" src="fotos/galeria_multimedia/placeholder.jpg" class="img-fluid" alt="Imagen Ampliada">
                     </div>
                 </div>
             </div>
@@ -238,13 +237,6 @@
     </footer> 
 
     <!-- Script para el modal -->
-    <script>
-        function openModal(imgElement) {
-            const modalImage = document.getElementById('modalImage');
-            modalImage.src = imgElement.src;  
-            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-            modal.show(); 
-        }
-    </script>
+    <script src="js/galeria_multimedia.js"></script>
 </body>
 </html>

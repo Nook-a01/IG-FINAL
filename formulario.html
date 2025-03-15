@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daft Punk</title>
+    <title>Formulario - Daft Punk</title>
     <link rel="icon" type="image/png" href="fotos/icono/icono.png">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/diseño.css" rel="stylesheet">
@@ -39,77 +39,95 @@
 
     <main class="container d-flex align-items-center p-5 justify-content-center">
         <div class="col-12 col-md-10">
-            <div class="row">
-                <div class="col-12 mb-5 p-2">
-                    <section class="card h-100 bg-dark shadow-lg">
-                        <div class="card-body">
-                            <h1 class="card-title text-center">COMPLETA EL FORMULARIO PARA COMUNICARNOS CON VOS</h1>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
             <article class="card h-100 mb-5 bg-dark shadow-lg">
                 <div class="card-body">
-                    <form class="row g-3 needs-validation" novalidate>
+                    <h1 class="card-title text-center text-white">COMPLETA EL FORMULARIO PARA COMUNICARNOS CON VOS</h1>
+
+                    <form class="row g-3 needs-validation" novalidate action="/enviar-formulario" method="POST">
+                        <!-- Nombre -->
                         <div class="col-12 p-2">
-                            <label for="validationCustom01" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="Escribe tu nombre" required>
-                            <div class="valid-feedback">
-                                Escribe tu nombre
+                            <label for="nombre" class="form-label text-white">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                            <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+                        </div>
+
+                        <!-- Apellido -->
+                        <div class="col-12 p-2">
+                            <label for="apellido" class="form-label text-white">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Escribe tu apellido" required>
+                            <div class="invalid-feedback">Por favor, escribe tu apellido.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-12 p-2">
+                            <label for="email" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Escribe tu email" required>
+                            <div class="invalid-feedback">Por favor, escribe un email válido.</div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-12 p-2">
+                            <label for="telefono" class="form-label text-white">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                        </div>
+
+                        <!-- Tipo de consulta -->
+                        <div class="col-12 p-2">
+                            <label for="tipoConsulta" class="form-label text-white">Tipo de consulta</label>
+                            <select class="form-select" id="tipoConsulta" name="tipoConsulta" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="prensa">Prensa</option>
+                                <option value="conciertos">Conciertos</option>
+                                <option value="merchandising">Merchandising</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                            <div class="invalid-feedback">Por favor, selecciona un tipo de consulta.</div>
+                        </div>
+
+                        <!-- Método de contacto (Radio Buttons) -->
+                        <div class="col-12 p-2">
+                            <label class="form-label text-white">¿Cómo prefieres que te contactemos?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="contactoEmail" name="metodoContacto" value="email" required>
+                                <label class="form-check-label text-white" for="contactoEmail">Por Email</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="contactoTelefono" name="metodoContacto" value="telefono">
+                                <label class="form-check-label text-white" for="contactoTelefono">Por Teléfono</label>
+                            </div>
+                            <div class="invalid-feedback">Por favor, selecciona una opción.</div>
+                        </div>
+
+                        <!-- Preferencias -->
+                        <div class="col-12 p-2">
+                            <label class="form-label text-white">Preferencias:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="noticias" name="noticias" value="noticias">
+                                <label class="form-check-label text-white" for="noticias">Recibir noticias</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="eventos" name="eventos" value="eventos">
+                                <label class="form-check-label text-white" for="eventos">Recibir información sobre eventos</label>
                             </div>
                         </div>
+
+                        <!-- Mensaje -->
                         <div class="col-12 p-2">
-                            <label for="validationCustom02" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="validationCustom02" placeholder="Escribe tu apellido" required>
-                            <div class="valid-feedback">
-                                Escribe tu apellido
-                            </div>
+                            <label for="mensaje" class="form-label text-white">Mensaje:</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+                            <div class="invalid-feedback">Por favor, escribe un mensaje.</div>
                         </div>
+
+                        <!-- Botón de envío -->
                         <div class="col-12 p-2">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Escribe tu email" required>
-                            <div class="valid-feedback">
-                                Escribe tu email
-                            </div>
-                        </div>
-                        <div class="col-12 p-2">
-                            <label for="mensajeInput" class="form-label">Mensaje:</label>
-                            <input type="text" class="form-control" id="mensajeInput" placeholder="Escribe tu mensaje">
-                        </div>
-                        <div class="col-12 p-2">
-                            <button type="submit" class="btn btn-primary">
-                                Enviar
-                            </button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </form>
+                    <div id="mensaje-exito"></div>
                 </div>
             </article>
         </div>
     </main>
-
-    <!-- Script para validación del formulario -->
-    <script>
-        (function () {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-    </script>
 
     <footer style="background-color: #000000;" class="border-top border-white">
         <div class="d-flex justify-content-center ">
@@ -130,5 +148,8 @@
             </a>
         </div>
     </footer>
+
+    <!-- Script para validación del formulario -->
+    <script src="js/formulario.js"></script>
 </body>
 </html>
