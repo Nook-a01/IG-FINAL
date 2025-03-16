@@ -20,7 +20,6 @@
                 setTimeout(() => {
                     form.reset();
                     form.classList.remove("was-validated");
-                    limpiarValidacion();
                 }, 2000);
             }
 
