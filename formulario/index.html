@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Daft Punk </title>
+    <link rel="icon" type="image/png" href="../fotos/icono/icono.png">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/diseño.css" rel="stylesheet">
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body style="background-color: #000000;">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-white">
+            <div class="container-fluid">
+                <a href="../index/index.html" class="p-2 ms-3">
+                    <img src="../fotos/nav/logo.png" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="fs-5"><a class="nav-link" href="../biografia/index.html">Biografía</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../discografia/index.html">Discografía</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../el_casco/index.html">El Casco</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../galeria_multimedia/index.html">Galería</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../giras/index.html">Giras</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../juego/index.html">Juego</a></li>
+                        <li class="fs-5"><a class="nav-link" href="index.html">Contacto</a></li>
+                        <li class="fs-5"><a class="nav-link" href="../quien_soy/index.html">Quién Soy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container d-flex align-items-center p-5 justify-content-center">
+        <div class="col-12 col-md-10">
+            <article class="card h-100 mb-5 bg-dark shadow-lg">
+                <div class="card-body">
+                    <h1 class="card-title text-center text-white">COMPLETA EL FORMULARIO PARA COMUNICARNOS CON VOS</h1>
+            <form action="https://formsubmit.co/hamcqc@gmail.com" method="POST" >
+                        <!-- Nombre -->
+                        <div class="col-12 p-2">
+                            <label for="nombre" class="form-label text-white">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                            <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+                        </div>
+
+                        <!-- Apellido -->
+                        <div class="col-12 p-2">
+                            <label for="apellido" class="form-label text-white">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Escribe tu apellido" required>
+                            <div class="invalid-feedback">Por favor, escribe tu apellido.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-12 p-2">
+                            <label for="email" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Escribe tu email" required>
+                            <div class="invalid-feedback">Por favor, escribe un email válido.</div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="col-12 p-2">
+                            <label for="telefono" class="form-label text-white">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                        </div>
+
+                        <!-- Tipo de consulta -->
+                        <div class="col-12 p-2">
+                            <label for="tipoConsulta" class="form-label text-white">Tipo de consulta</label>
+                            <select class="form-select" id="tipoConsulta" name="tipoConsulta" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="prensa">Prensa</option>
+                                <option value="conciertos">Conciertos</option>
+                                <option value="merchandising">Merchandising</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                            <div class="invalid-feedback">Por favor, selecciona un tipo de consulta.</div>
+                        </div>
+
+                        <!-- Método de contacto (Radio Buttons) -->
+                        <div class="col-12 p-2">
+                            <label class="form-label text-white">¿Cómo prefieres que te contactemos?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="contactoEmail" name="metodoContacto" value="email" required>
+                                <label class="form-check-label text-white" for="contactoEmail">Por Email</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="contactoTelefono" name="metodoContacto" value="telefono">
+                                <label class="form-check-label text-white" for="contactoTelefono">Por Teléfono</label>
+                            </div>
+                            <div class="invalid-feedback">Por favor, selecciona una opción.</div>
+                        </div>
+
+                        <!-- Preferencias -->
+                        <div class="col-12 p-2">
+                            <label class="form-label text-white">Preferencias:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="noticias" name="noticias" value="noticias">
+                                <label class="form-check-label text-white" for="noticias">Recibir noticias</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="eventos" name="eventos" value="eventos">
+                                <label class="form-check-label text-white" for="eventos">Recibir información sobre eventos</label>
+                            </div>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="col-12 p-2">
+                            <label for="mensaje" class="form-label text-white">Mensaje:</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+                            <div class="invalid-feedback">Por favor, escribe un mensaje.</div>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <div class="col-12 p-2">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+
+                        <!-- Eliminar Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                    <div id="mensaje-exito"></div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer style="background-color: #000000;" class="border-top border-white">
+        <div class="d-flex justify-content-center ">
+            <a class="navbar-brand" target="_blank" href="https://www.facebook.com/daftpunk/?locale=es_LA">
+                <img src="../fotos/footer/facebook.png" alt="logo-facebook" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.tiktok.com/@daftpunk?lang=es">
+                <img src="../fotos/footer/tiktok.png" alt="logo-tiktok" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://x.com/daftpunk">
+                <img src="../fotos/footer/x.png" alt="logo-x" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.youtube.com/channel/UC_kRDKYrUlrbtrSiyu5Tflg">
+                <img src="../fotos/footer/youtube.png" alt="logo-youtube" width="40">
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.instagram.com/daftpunk/?hl=es">
+                <img src="../fotos/footer/instagram.png" alt="logo-instagram" width="40">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script para validación del formulario -->
+    <script src="../js/formulario.js"></script>
+</body>
+</html>
