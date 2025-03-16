@@ -56,6 +56,10 @@
   min-height: 100px; /* Altura mínima */
   padding: 10px;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Colores para los botones de samples */
@@ -125,8 +129,15 @@
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 576px) {
+  .sample-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
   .sample-buttons button {
-      width: 100%; /* Los botones ocupan todo el ancho en móviles */
+      width: 80%; /* Los botones ocupan el 80% del ancho en móviles */
       margin: 5px 0; /* Espaciado vertical entre botones */
       padding: 10px; /* Aumentar el área táctil */
       font-size: 1rem; /* Tamaño de fuente más grande para móviles */
