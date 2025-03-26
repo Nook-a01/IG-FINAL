@@ -23,6 +23,8 @@ const correctOrder5 = [
     "track_4", "track_5", "track_6", "track_4", "track_8", "track_5", "track_9", "track_7", "track_5", "track_7", "track_8", "track_5", "track_8", "track_6" , "track_5" // Secuencia correcta para el Nivel 5
 ];
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Variable para almacenar el audio actual
 let currentAudio = null;
 
@@ -33,17 +35,21 @@ let timerInterval;
 // Variable para almacenar el nivel actual
 let nivelActual = 1; // 1 para Nivel 1, 2 para Nivel 2, 3 para Nivel 3, 4 para Nivel 4, 5 para Nivel 5
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para iniciar el temporizador
 function startTimer() {
     timerInterval = setInterval(updateTimer, 1000); // Actualiza cada segundo
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para actualizar el temporizador
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
     const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
+    
     // Actualizar el temporizador según el nivel actual
     if (nivelActual === 1) {
         document.getElementById("timer").textContent = timerText;
@@ -65,6 +71,8 @@ function updateTimer() {
         timeLeft--; // Reduce el tiempo restante
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para mostrar el modal de "Se te acabó el tiempo"
 function mostrarModalPerdiste() {
@@ -90,6 +98,8 @@ function mostrarModalPerdiste() {
         botonReintentar.onclick = reiniciarAlNivel1;
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para reiniciar el nivel (Nivel 1)
 function reiniciarNivel() {
@@ -153,6 +163,8 @@ function reiniciarAlNivel1() {
     actualizarCantidadSamples();
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para habilitar las funcionalidades del juego
 function habilitarFuncionalidades() {
     // Habilitar los botones de samples
@@ -169,6 +181,8 @@ function habilitarFuncionalidades() {
     document.querySelector(".btn-danger").disabled = false; // Botón "Eliminar Sample"
     document.querySelector(".btn-success").disabled = false; // Botón "Verificar"
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para bloquear las funcionalidades del juego
 function bloquearFuncionalidades() {
@@ -187,6 +201,8 @@ function bloquearFuncionalidades() {
     document.querySelector(".btn-success").disabled = true; // Botón "Verificar"
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para comenzar el juego (oculta la pantalla de inicio y muestra el nivel 1)
 function comenzarJuego() {
     document.getElementById("pantallaInicio").style.display = "none"; // Oculta la pantalla de inicio
@@ -197,6 +213,8 @@ function comenzarJuego() {
     actualizarCantidadSamples();
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para detener cualquier audio que esté sonando
 function stopCurrentAudio() {
     if (currentAudio) {
@@ -204,6 +222,8 @@ function stopCurrentAudio() {
         currentAudio.currentTime = 0; // Reinicia el audio al inicio
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para reproducir el audio de referencia (Nivel 1)
 function playSong() {
@@ -255,6 +275,8 @@ function playSong5() {
         .catch(error => console.error("Error al reproducir el audio de referencia:", error)); // Manejo de errores
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para reproducir los samples (Nivel 1)
 function playSample(sampleName) {
     stopCurrentAudio(); // Detiene cualquier audio que esté sonando
@@ -304,6 +326,8 @@ function playSample5(sampleName) {
         .then(() => console.log(`Sample ${sampleName} reproducido correctamente`)) // Mensaje de éxito
         .catch(error => console.error(`Error al reproducir el sample ${sampleName}:`, error)); // Manejo de errores
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para manejar el arrastre de los botones
 function drag(event) {
@@ -525,6 +549,8 @@ function drop5(event) {
     }
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para eliminar el último sample de la respuesta (Nivel 1)
 function removeLastSample() {
     const dropzone = document.getElementById("dropzone");
@@ -589,6 +615,8 @@ function removeLastSample5() {
         console.log("No hay samples para eliminar");
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para reproducir la respuesta del jugador (Nivel 1)
 function playAnswer() {
@@ -730,6 +758,8 @@ function playAnswer5() {
         .catch(error => console.error("Error al reproducir la secuencia:", error));
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para verificar la secuencia (Nivel 1)
 function checkOrder() {
     const dropzone = document.getElementById("dropzone");
@@ -843,6 +873,8 @@ function checkOrder5() {
         document.getElementById("message5").style.color = "red";
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para pasar al nivel 2
 function pasarAlNivel2() {
@@ -968,6 +1000,8 @@ function pasarAlNivel5() {
     actualizarCantidadSamples();
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // Función para mostrar la pantalla final de felicitaciones
 function mostrarPantallaFinal() {
     // Ocultar todos los niveles y mostrar la pantalla final
@@ -978,6 +1012,8 @@ function mostrarPantallaFinal() {
     document.getElementById("nivel5").style.display = "none";
     document.getElementById("pantallaFinal").style.display = "block";
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
@@ -1013,6 +1049,8 @@ function reiniciarJuego() {
     // Actualizar el mensaje de la cantidad de samples
     actualizarCantidadSamples();
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para actualizar el mensaje de la cantidad de samples
 function actualizarCantidadSamples() {
@@ -1085,6 +1123,8 @@ document.getElementById("dropzone4").ondrop = drop4;
 // Configurar el área de drop (Nivel 5)
 document.getElementById("dropzone5").ondragover = allowDrop;
 document.getElementById("dropzone5").ondrop = drop5;
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Función para manejar el arrastre en dispositivos móviles
 function touchStart(event) {
